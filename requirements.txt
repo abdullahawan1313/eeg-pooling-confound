@@ -1,0 +1,14 @@
+# Python 3.10-3.12
+# Install PyTorch first (CPU or CUDA build) from https://pytorch.org, then:
+#   pip install -r requirements.txt
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+mne>=1.6
+mat73>=0.63
+xlrd>=2.0.1
+openpyxl>=3.1
+fooof==1.1.0
+tqdm>=4.66

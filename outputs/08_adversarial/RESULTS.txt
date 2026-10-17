@@ -1,0 +1,108 @@
+corpus (14655, 10, 512) | device cuda
+
+=== held-out DASPS: source=['BIDS', 'Mendeley', 'MentalArithmetic', 'SAM40']  train=10636 src-val=2363 target=1656
+    identity probe on src-val: majority=0.317  band-power input=0.858
+  lam=0.0  seed 0: target AUC=0.521  src-val AUC=0.684  id-probe=0.871 (maj 0.317)  pred_std=0.353   (1 min)
+  lam=0.0  seed 1: target AUC=0.500  src-val AUC=0.696  id-probe=0.878 (maj 0.317)  pred_std=0.374   (1 min)
+  lam=0.1  seed 0: target AUC=0.525  src-val AUC=0.681  id-probe=0.770 (maj 0.317)  pred_std=0.296   (2 min)
+  lam=0.1  seed 1: target AUC=0.519  src-val AUC=0.710  id-probe=0.758 (maj 0.317)  pred_std=0.415   (2 min)
+  lam=0.3  seed 0: target AUC=0.503  src-val AUC=0.596  id-probe=0.518 (maj 0.317)  pred_std=0.092   (3 min)
+  lam=0.3  seed 1: target AUC=0.483  src-val AUC=0.663  id-probe=0.608 (maj 0.317)  pred_std=0.333   (4 min)
+  lam=1.0  seed 0: target AUC=0.500  src-val AUC=0.532  id-probe=0.491 (maj 0.317)  pred_std=0.021   (4 min)
+  lam=1.0  seed 1: target AUC=0.493  src-val AUC=0.419  id-probe=0.628 (maj 0.317)  pred_std=0.007  COLLAPSED   (5 min)
+  lam=3.0  seed 0: target AUC=0.512  src-val AUC=0.604  id-probe=0.396 (maj 0.317)  pred_std=0.066   (6 min)
+  lam=3.0  seed 1: target AUC=0.502  src-val AUC=0.515  id-probe=0.687 (maj 0.317)  pred_std=0.009  COLLAPSED   (6 min)
+
+=== held-out Mendeley: source=['BIDS', 'DASPS', 'MentalArithmetic', 'SAM40']  train=7281 src-val=1712 target=5662
+    identity probe on src-val: majority=0.360  band-power input=0.904
+  lam=0.0  seed 0: target AUC=0.483  src-val AUC=0.791  id-probe=0.940 (maj 0.360)  pred_std=0.287   (7 min)
+  lam=0.0  seed 1: target AUC=0.533  src-val AUC=0.794  id-probe=0.924 (maj 0.360)  pred_std=0.316   (7 min)
+  lam=0.1  seed 0: target AUC=0.512  src-val AUC=0.729  id-probe=0.906 (maj 0.360)  pred_std=0.302   (8 min)
+  lam=0.1  seed 1: target AUC=0.372  src-val AUC=0.733  id-probe=0.872 (maj 0.360)  pred_std=0.158   (8 min)
+  lam=0.3  seed 0: target AUC=0.500  src-val AUC=0.500  id-probe=0.934 (maj 0.360)  pred_std=0.000  COLLAPSED   (8 min)
+  lam=0.3  seed 1: target AUC=0.366  src-val AUC=0.640  id-probe=0.856 (maj 0.360)  pred_std=0.176   (9 min)
+  lam=1.0  seed 0: target AUC=0.487  src-val AUC=0.447  id-probe=0.885 (maj 0.360)  pred_std=0.008  COLLAPSED   (9 min)
+  lam=1.0  seed 1: target AUC=0.477  src-val AUC=0.483  id-probe=0.822 (maj 0.360)  pred_std=0.000  COLLAPSED   (10 min)
+  lam=3.0  seed 0: target AUC=0.565  src-val AUC=0.620  id-probe=0.890 (maj 0.360)  pred_std=0.009  COLLAPSED   (10 min)
+  lam=3.0  seed 1: target AUC=0.500  src-val AUC=0.503  id-probe=0.751 (maj 0.360)  pred_std=0.000  COLLAPSED   (10 min)
+
+=== held-out MentalArithmetic: source=['BIDS', 'DASPS', 'Mendeley', 'SAM40']  train=10012 src-val=2483 target=2160
+    identity probe on src-val: majority=0.480  band-power input=0.874
+  lam=0.0  seed 0: target AUC=0.617  src-val AUC=0.665  id-probe=0.932 (maj 0.480)  pred_std=0.388   (11 min)
+  lam=0.0  seed 1: target AUC=0.566  src-val AUC=0.723  id-probe=0.931 (maj 0.480)  pred_std=0.268   (11 min)
+  lam=0.1  seed 0: target AUC=0.579  src-val AUC=0.654  id-probe=0.785 (maj 0.480)  pred_std=0.339   (12 min)
+  lam=0.1  seed 1: target AUC=0.595  src-val AUC=0.680  id-probe=0.845 (maj 0.480)  pred_std=0.248   (13 min)
+  lam=0.3  seed 0: target AUC=0.479  src-val AUC=0.483  id-probe=0.780 (maj 0.480)  pred_std=0.015   (13 min)
+  lam=0.3  seed 1: target AUC=0.575  src-val AUC=0.667  id-probe=0.746 (maj 0.480)  pred_std=0.180   (14 min)
+  lam=1.0  seed 0: target AUC=0.516  src-val AUC=0.564  id-probe=0.687 (maj 0.480)  pred_std=0.017   (15 min)
+  lam=1.0  seed 1: target AUC=0.506  src-val AUC=0.541  id-probe=0.730 (maj 0.480)  pred_std=0.004  COLLAPSED   (15 min)
+  lam=3.0  seed 0: target AUC=0.571  src-val AUC=0.483  id-probe=0.661 (maj 0.480)  pred_std=0.085   (16 min)
+  lam=3.0  seed 1: target AUC=0.498  src-val AUC=0.394  id-probe=0.870 (maj 0.480)  pred_std=0.000  COLLAPSED   (17 min)
+
+=== held-out SAM40: source=['BIDS', 'DASPS', 'Mendeley', 'MentalArithmetic']  train=8750 src-val=2341 target=3564
+    identity probe on src-val: majority=0.573  band-power input=0.885
+  lam=0.0  seed 0: target AUC=0.528  src-val AUC=0.591  id-probe=0.917 (maj 0.573)  pred_std=0.354   (17 min)
+  lam=0.0  seed 1: target AUC=0.513  src-val AUC=0.681  id-probe=0.956 (maj 0.573)  pred_std=0.378   (17 min)
+  lam=0.1  seed 0: target AUC=0.532  src-val AUC=0.744  id-probe=0.727 (maj 0.573)  pred_std=0.286   (18 min)
+  lam=0.1  seed 1: target AUC=0.492  src-val AUC=0.690  id-probe=0.786 (maj 0.573)  pred_std=0.286   (19 min)
+  lam=0.3  seed 0: target AUC=0.532  src-val AUC=0.458  id-probe=0.680 (maj 0.573)  pred_std=0.076   (19 min)
+  lam=0.3  seed 1: target AUC=0.452  src-val AUC=0.765  id-probe=0.775 (maj 0.573)  pred_std=0.168   (20 min)
+  lam=1.0  seed 0: target AUC=0.490  src-val AUC=0.492  id-probe=0.640 (maj 0.573)  pred_std=0.005  COLLAPSED   (20 min)
+  lam=1.0  seed 1: target AUC=0.510  src-val AUC=0.678  id-probe=0.767 (maj 0.573)  pred_std=0.000  COLLAPSED   (21 min)
+  lam=3.0  seed 0: target AUC=0.496  src-val AUC=0.532  id-probe=0.595 (maj 0.573)  pred_std=0.007  COLLAPSED   (21 min)
+  lam=3.0  seed 1: target AUC=0.462  src-val AUC=0.401  id-probe=0.755 (maj 0.573)  pred_std=0.000  COLLAPSED   (22 min)
+
+=== SUMMARY by lambda_max (mean over 4 held-out x 2 seeds) ===
+            target_auc  srcval_auc  id_probe  id_majority  n_collapsed
+lambda_max                                                            
+0.0              0.533       0.703     0.919        0.432            0
+0.1              0.516       0.703     0.806        0.432            0
+0.3              0.486       0.596     0.737        0.432            1
+1.0              0.497       0.519     0.706        0.432            6
+3.0              0.514       0.507     0.701        0.432            6
+
+=== Per held-out x lambda (mean over seeds) ===
+                             target_auc  srcval_auc  id_probe
+held_out         lambda_max                                  
+DASPS            0.0              0.511       0.690     0.875
+                 0.1              0.522       0.695     0.764
+                 0.3              0.493       0.629     0.563
+                 1.0              0.497       0.476     0.560
+                 3.0              0.507       0.559     0.541
+Mendeley         0.0              0.508       0.792     0.932
+                 0.1              0.442       0.731     0.889
+                 0.3              0.433       0.570     0.895
+                 1.0              0.482       0.465     0.853
+                 3.0              0.533       0.562     0.820
+MentalArithmetic 0.0              0.591       0.694     0.931
+                 0.1              0.587       0.667     0.815
+                 0.3              0.527       0.575     0.763
+                 1.0              0.511       0.552     0.708
+                 3.0              0.535       0.439     0.766
+SAM40            0.0              0.520       0.636     0.936
+                 0.1              0.512       0.717     0.757
+                 0.3              0.492       0.612     0.728
+                 1.0              0.500       0.585     0.704
+                 3.0              0.479       0.466     0.675
+
+=== Target AUC with participant-cluster CI (seed-averaged) ===
+  DASPS             lam=0.0  AUC=0.511 CI[0.446,0.576]
+  DASPS             lam=0.1  AUC=0.523 CI[0.456,0.588]
+  DASPS             lam=0.3  AUC=0.490 CI[0.407,0.575]
+  DASPS             lam=1.0  AUC=0.486 CI[0.424,0.545]
+  DASPS             lam=3.0  AUC=0.511 CI[0.450,0.570]
+  Mendeley          lam=0.0  AUC=0.514 CI[0.399,0.641]
+  Mendeley          lam=0.1  AUC=0.455 CI[0.340,0.573]
+  Mendeley          lam=0.3  AUC=0.366 CI[0.214,0.518]
+  Mendeley          lam=1.0  AUC=0.488 CI[0.451,0.522]
+  Mendeley          lam=3.0  AUC=0.566 CI[0.440,0.680]
+  MentalArithmetic  lam=0.0  AUC=0.609 CI[0.539,0.678]
+  MentalArithmetic  lam=0.1  AUC=0.584 CI[0.509,0.658]
+  MentalArithmetic  lam=0.3  AUC=0.573 CI[0.505,0.649]
+  MentalArithmetic  lam=1.0  AUC=0.518 CI[0.469,0.570]
+  MentalArithmetic  lam=3.0  AUC=0.571 CI[0.532,0.606]
+  SAM40             lam=0.0  AUC=0.522 CI[0.477,0.562]
+  SAM40             lam=0.1  AUC=0.517 CI[0.477,0.557]
+  SAM40             lam=0.3  AUC=0.471 CI[0.423,0.516]
+  SAM40             lam=1.0  AUC=0.490 CI[0.452,0.524]
+  SAM40             lam=3.0  AUC=0.487 CI[0.463,0.511]

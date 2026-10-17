@@ -1,0 +1,24 @@
+id,hamA_pre,hamA_post,hamA_pre_score,hamA_pre_level
+S01,25:moderate,37:severe,25.0,moderate
+S02,21:moderate,30:severe,21.0,moderate
+S03,33:severe,36:severe,33.0,severe
+S04,29:severe,33:severe,29.0,severe
+S05,36:severe,36:severe,36.0,severe
+S06,34:severe,38:severe,34.0,severe
+S07,24:moderate,27:severe,24.0,moderate
+S08,17:light,19:light,17.0,light
+S09,17:light,17:light,17.0,light
+S10,7:normal,12:normal,7.0,normal
+S11,15:light,24:moderate,15.0,light
+S12,28:severe,35:severe,28.0,severe
+S13,25:moderate,25:moderate,25.0,moderate
+S14,7:normal,7:normal,7.0,normal
+S15,12:normal,18:light,12.0,normal
+S16,23: moderate,26:severe,23.0,moderate
+S17,24:moderate,29:zsevere,24.0,moderate
+S18,15:light,17:light,15.0,light
+S19,34:severe,44:severe,34.0,severe
+S20,27:severe,38:severe,27.0,severe
+S21,17: light,23: moderate,17.0,light
+S22,13:light,28:severe,13.0,light
+S23,12:normal,14:light,12.0,normal

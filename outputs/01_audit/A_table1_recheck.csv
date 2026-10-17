@@ -1,0 +1,6 @@
+dataset,n_participants,windows,pct_anxious,win_per_part_min,win_per_part_median,win_per_part_max,participants_all_anxious,participants_all_normal,participants_mixed
+BIDS,30,1613,0.0,22,55.0,55,0,30,0
+DASPS,23,1656,59.4,72,72.0,72,2,0,21
+Mendeley,38,5662,60.5,149,149.0,149,23,15,0
+MentalArithmetic,36,2160,50.0,60,60.0,60,0,0,36
+SAM40,40,3564,63.0,33,88.0,132,0,1,39

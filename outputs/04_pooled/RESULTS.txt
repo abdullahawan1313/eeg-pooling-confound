@@ -1,0 +1,36 @@
+corpus (14655, 10, 512) | device cuda
+split 42 seed 0: pooled=0.719 noBIDS=0.609 prior=0.676 | DASP=0.511 Mend=0.521 Ment=0.695 SAM4=0.739   (1 min)
+split 42 seed 1: pooled=0.717 noBIDS=0.599 prior=0.676 | DASP=0.529 Mend=0.384 Ment=0.655 SAM4=0.747   (1 min)
+split 42 seed 2: pooled=0.702 noBIDS=0.562 prior=0.676 | DASP=0.451 Mend=0.392 Ment=0.687 SAM4=0.751   (2 min)
+split  0 seed 0: pooled=0.639 noBIDS=0.590 prior=0.551 | DASP=0.438 Mend=0.619 Ment=0.690 SAM4=0.624   (2 min)
+split  0 seed 1: pooled=0.627 noBIDS=0.570 prior=0.551 | DASP=0.406 Mend=0.567 Ment=0.760 SAM4=0.686   (3 min)
+split  0 seed 2: pooled=0.645 noBIDS=0.588 prior=0.551 | DASP=0.455 Mend=0.630 Ment=0.708 SAM4=0.610   (4 min)
+split  1 seed 0: pooled=0.626 noBIDS=0.538 prior=0.570 | DASP=0.550 Mend=0.437 Ment=0.753 SAM4=0.712   (4 min)
+split  1 seed 1: pooled=0.644 noBIDS=0.560 prior=0.570 | DASP=0.454 Mend=0.508 Ment=0.754 SAM4=0.712   (5 min)
+split  1 seed 2: pooled=0.675 noBIDS=0.623 prior=0.570 | DASP=0.617 Mend=0.614 Ment=0.685 SAM4=0.707   (5 min)
+split  2 seed 0: pooled=0.699 noBIDS=0.497 prior=0.723 | DASP=0.462 Mend=0.391 Ment=0.542 SAM4=0.687   (6 min)
+split  2 seed 1: pooled=0.698 noBIDS=0.527 prior=0.723 | DASP=0.461 Mend=0.431 Ment=0.534 SAM4=0.659   (6 min)
+split  2 seed 2: pooled=0.701 noBIDS=0.495 prior=0.723 | DASP=0.562 Mend=0.282 Ment=0.565 SAM4=0.648   (7 min)
+split  3 seed 0: pooled=0.649 noBIDS=0.531 prior=0.665 | DASP=0.545 Mend=0.134 Ment=0.705 SAM4=0.725   (8 min)
+split  3 seed 1: pooled=0.659 noBIDS=0.539 prior=0.665 | DASP=0.533 Mend=0.121 Ment=0.711 SAM4=0.635   (8 min)
+split  3 seed 2: pooled=0.645 noBIDS=0.534 prior=0.665 | DASP=0.589 Mend=0.082 Ment=0.703 SAM4=0.662   (9 min)
+
+=== SUMMARY over 15 runs (5 splits x 3 seeds) ===
+                        mean     sd    min    max  n_runs_valid
+auc_pooled             0.670  0.033  0.626  0.719            15
+auc_pooled_noBIDS      0.558  0.039  0.495  0.623            15
+auc_prior              0.637  0.068  0.551  0.723            15
+auc_within_weighted    0.560  0.048  0.492  0.641            15
+between_dataset_share  0.109  0.064  0.019  0.209            15
+auc_DASPS              0.504  0.062  0.406  0.617            15
+auc_Mendeley           0.408  0.183  0.082  0.630            15
+auc_MentalArithmetic   0.677  0.073  0.534  0.760            15
+auc_SAM40              0.687  0.046  0.610  0.751            15
+
+=== Split 42 (split of the earlier analysis), predictions averaged over 3 seeds, participant-cluster 95% CI ===
+  ALL               AUC=0.737  CI[0.605,0.868]  participants=34
+  noBIDS            AUC=0.618  CI[0.482,0.757]  participants=26
+  DASPS             AUC=0.496  CI[0.332,0.613]  participants=4
+  Mendeley          AUC=0.438  CI[0.237,0.642]  participants=7
+  MentalArithmetic  AUC=0.688  CI[0.559,0.810]  participants=8
+  SAM40             AUC=0.783  CI[0.689,0.868]  participants=7

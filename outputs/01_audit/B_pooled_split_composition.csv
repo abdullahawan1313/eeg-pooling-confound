@@ -1,0 +1,6 @@
+dataset,test_participants,test_windows,test_pct_anx,train_prevalence
+BIDS,8,438,0.0,0.0
+DASPS,4,288,50.0,0.614
+Mendeley,7,1043,71.4,0.581
+MentalArithmetic,8,480,50.0,0.5
+SAM40,7,638,63.8,0.628

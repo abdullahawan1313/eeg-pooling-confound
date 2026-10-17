@@ -1,0 +1,47 @@
+corpus: (14655, 10, 512)
+
+=== DASPS: windows=1656 participants=23 ===
+  seed 0  bandpower_LR     AUC=0.474  CI[0.426,0.520]   (0 min elapsed)
+  seed 0  cnn_transformer  AUC=0.495  CI[0.410,0.577]   (0 min elapsed)
+  seed 1  bandpower_LR     AUC=0.463  CI[0.414,0.514]   (1 min elapsed)
+  seed 1  cnn_transformer  AUC=0.509  CI[0.424,0.593]   (1 min elapsed)
+  seed 2  bandpower_LR     AUC=0.457  CI[0.408,0.509]   (1 min elapsed)
+  seed 2  cnn_transformer  AUC=0.465  CI[0.393,0.538]   (1 min elapsed)
+
+=== SAM40: windows=3564 participants=40 ===
+  seed 0  bandpower_LR     AUC=0.681  CI[0.644,0.721]   (1 min elapsed)
+  seed 0  cnn_transformer  AUC=0.669  CI[0.634,0.705]   (2 min elapsed)
+  seed 1  bandpower_LR     AUC=0.691  CI[0.655,0.730]   (2 min elapsed)
+  seed 1  cnn_transformer  AUC=0.669  CI[0.638,0.704]   (3 min elapsed)
+  seed 2  bandpower_LR     AUC=0.683  CI[0.643,0.722]   (3 min elapsed)
+  seed 2  cnn_transformer  AUC=0.714  CI[0.678,0.751]   (4 min elapsed)
+
+=== MentalArithmetic: windows=2160 participants=36 ===
+  seed 0  bandpower_LR     AUC=0.681  CI[0.609,0.748]   (4 min elapsed)
+  seed 0  cnn_transformer  AUC=0.731  CI[0.679,0.783]   (4 min elapsed)
+  seed 1  bandpower_LR     AUC=0.681  CI[0.609,0.748]   (4 min elapsed)
+  seed 1  cnn_transformer  AUC=0.734  CI[0.678,0.788]   (5 min elapsed)
+  seed 2  bandpower_LR     AUC=0.681  CI[0.609,0.748]   (5 min elapsed)
+  seed 2  cnn_transformer  AUC=0.681  CI[0.629,0.734]   (6 min elapsed)
+
+=== Mendeley: windows=5662 participants=38 ===
+  seed 0  bandpower_LR     AUC=0.630  CI[0.532,0.728]   (6 min elapsed)
+  seed 0  cnn_transformer  AUC=0.634  CI[0.497,0.770]   (7 min elapsed)
+  seed 1  bandpower_LR     AUC=0.584  CI[0.475,0.689]   (7 min elapsed)
+  seed 1  cnn_transformer  AUC=0.508  CI[0.363,0.654]   (8 min elapsed)
+  seed 2  bandpower_LR     AUC=0.539  CI[0.409,0.659]   (8 min elapsed)
+  seed 2  cnn_transformer  AUC=0.500  CI[0.341,0.654]   (9 min elapsed)
+
+=== SUMMARY (mean over seeds) ===
+                                  auc_mean  auc_sd  ci_lo_mean  ci_hi_mean
+dataset          model                                                    
+DASPS            bandpower_LR        0.464   0.009       0.416       0.514
+                 cnn_transformer     0.490   0.023       0.409       0.569
+Mendeley         bandpower_LR        0.584   0.046       0.472       0.692
+                 cnn_transformer     0.547   0.075       0.400       0.693
+MentalArithmetic bandpower_LR        0.681   0.000       0.609       0.748
+                 cnn_transformer     0.715   0.030       0.662       0.768
+SAM40            bandpower_LR        0.685   0.005       0.647       0.724
+                 cnn_transformer     0.684   0.026       0.650       0.720
+
+LODO of the earlier analysis (CNN-Transformer, 1 seed), for reference: DASPS 0.514, SAM40 0.537, MA 0.581, Mendeley 0.507

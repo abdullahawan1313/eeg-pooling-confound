@@ -1,0 +1,113 @@
+=== Complexity (per 4-s window, 10 x 512) ===
+  cnn_transformer   params= 480,418  MFLOPs=   62.51  CPU 1.139 ms/window
+  pure_cnn          params=  82,978  MFLOPs=   12.17  CPU 0.187 ms/window
+  pure_transformer  params= 430,786  MFLOPs=   26.49  CPU 0.432 ms/window
+  eegnet            params=   1,778  MFLOPs=    5.55  CPU 0.682 ms/window
+  shallow_convnet   params=  21,282  MFLOPs=   21.21  CPU 1.869 ms/window
+
+corpus (14655, 10, 512) | device cuda
+computing band-power features ...
+
+##### pure_cnn #####
+  within  DASPS             AUC=0.464   (0 min)
+  within  Mendeley          AUC=0.634   (0 min)
+  within  MentalArithmetic  AUC=0.712   (1 min)
+  within  SAM40             AUC=0.681   (1 min)
+  pooled  split 42 AUC=0.719  noBIDS=0.602
+  pooled  split 0  AUC=0.677  noBIDS=0.627
+  pooled  split 1  AUC=0.605  noBIDS=0.521
+  LODO    DASPS             seed 0 AUC=0.518
+  LODO    DASPS             seed 1 AUC=0.530
+  LODO    Mendeley          seed 0 AUC=0.618
+  LODO    Mendeley          seed 1 AUC=0.651
+  LODO    MentalArithmetic  seed 0 AUC=0.551
+  LODO    MentalArithmetic  seed 1 AUC=0.559
+  LODO    SAM40             seed 0 AUC=0.493
+  LODO    SAM40             seed 1 AUC=0.503
+
+##### pure_transformer #####
+  within  DASPS             AUC=0.501   (3 min)
+  within  Mendeley          AUC=0.629   (4 min)
+  within  MentalArithmetic  AUC=0.631   (4 min)
+  within  SAM40             AUC=0.598   (4 min)
+  pooled  split 42 AUC=0.728  noBIDS=0.611
+  pooled  split 0  AUC=0.625  noBIDS=0.569
+  pooled  split 1  AUC=0.650  noBIDS=0.576
+  LODO    DASPS             seed 0 AUC=0.496
+  LODO    DASPS             seed 1 AUC=0.485
+  LODO    Mendeley          seed 0 AUC=0.520
+  LODO    Mendeley          seed 1 AUC=0.483
+  LODO    MentalArithmetic  seed 0 AUC=0.553
+  LODO    MentalArithmetic  seed 1 AUC=0.553
+  LODO    SAM40             seed 0 AUC=0.523
+  LODO    SAM40             seed 1 AUC=0.528
+
+##### eegnet #####
+  within  DASPS             AUC=0.415   (9 min)
+  within  Mendeley          AUC=0.697   (9 min)
+  within  MentalArithmetic  AUC=0.738   (9 min)
+  within  SAM40             AUC=0.708   (10 min)
+  pooled  split 42 AUC=0.748  noBIDS=0.631
+  pooled  split 0  AUC=0.652  noBIDS=0.598
+  pooled  split 1  AUC=0.581  noBIDS=0.481
+  LODO    DASPS             seed 0 AUC=0.513
+  LODO    DASPS             seed 1 AUC=0.513
+  LODO    Mendeley          seed 0 AUC=0.460
+  LODO    Mendeley          seed 1 AUC=0.516
+  LODO    MentalArithmetic  seed 0 AUC=0.520
+  LODO    MentalArithmetic  seed 1 AUC=0.562
+  LODO    SAM40             seed 0 AUC=0.474
+  LODO    SAM40             seed 1 AUC=0.471
+
+##### shallow_convnet #####
+  within  DASPS             AUC=0.482   (12 min)
+  within  Mendeley          AUC=0.616   (14 min)
+  within  MentalArithmetic  AUC=0.752   (14 min)
+  within  SAM40             AUC=0.661   (15 min)
+  pooled  split 42 AUC=0.724  noBIDS=0.601
+  pooled  split 0  AUC=0.647  noBIDS=0.593
+  pooled  split 1  AUC=0.632  noBIDS=0.551
+  LODO    DASPS             seed 0 AUC=0.503
+  LODO    DASPS             seed 1 AUC=0.488
+  LODO    Mendeley          seed 0 AUC=0.606
+  LODO    Mendeley          seed 1 AUC=0.572
+  LODO    MentalArithmetic  seed 0 AUC=0.537
+  LODO    MentalArithmetic  seed 1 AUC=0.556
+  LODO    SAM40             seed 0 AUC=0.498
+  LODO    SAM40             seed 1 AUC=0.473
+
+##### bandpower_LR #####
+  within  DASPS             AUC=0.474   (22 min)
+  within  Mendeley          AUC=0.630   (22 min)
+  within  MentalArithmetic  AUC=0.681   (22 min)
+  within  SAM40             AUC=0.681   (22 min)
+  pooled  split 42 AUC=0.661  noBIDS=0.554
+  pooled  split 0  AUC=0.590  noBIDS=0.557
+  pooled  split 1  AUC=0.503  noBIDS=0.410
+  LODO    DASPS             seed 0 AUC=0.510
+  LODO    Mendeley          seed 0 AUC=0.466
+  LODO    MentalArithmetic  seed 0 AUC=0.557
+  LODO    SAM40             seed 0 AUC=0.439
+
+##### bandpower_RF #####
+  within  DASPS             AUC=0.440   (23 min)
+  within  Mendeley          AUC=0.548   (23 min)
+  within  MentalArithmetic  AUC=0.702   (24 min)
+  within  SAM40             AUC=0.699   (24 min)
+  pooled  split 42 AUC=0.627  noBIDS=0.487
+  pooled  split 0  AUC=0.534  noBIDS=0.492
+  pooled  split 1  AUC=0.481  noBIDS=0.396
+  LODO    DASPS             seed 0 AUC=0.541
+  LODO    Mendeley          seed 0 AUC=0.459
+  LODO    MentalArithmetic  seed 0 AUC=0.591
+  LODO    SAM40             seed 0 AUC=0.434
+
+=== SUMMARY: mean AUC ===
+           model  within_SAM40  within_MA  within_DASPS  within_Mend  pooled  pooled_noBIDS  lodo_SAM40  lodo_MA  lodo_DASPS  lodo_Mend  lodo_mean4
+    bandpower_LR         0.681      0.681         0.474        0.630   0.585          0.507       0.439    0.557       0.510      0.466       0.493
+    bandpower_RF         0.699      0.702         0.440        0.548   0.548          0.458       0.434    0.591       0.541      0.459       0.506
+ cnn_transformer         0.659      0.726         0.483        0.573   0.670          0.558       0.510    0.556       0.512      0.552       0.532
+          eegnet         0.708      0.738         0.415        0.697   0.660          0.570       0.473    0.541       0.513      0.488       0.504
+        pure_cnn         0.681      0.712         0.464        0.634   0.667          0.583       0.498    0.555       0.524      0.635       0.553
+pure_transformer         0.598      0.631         0.501        0.629   0.668          0.585       0.526    0.553       0.491      0.502       0.518
+ shallow_convnet         0.661      0.752         0.482        0.616   0.668          0.582       0.486    0.546       0.495      0.589       0.529

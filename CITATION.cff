@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this code, please cite the accompanying article."
+title: "Pooled Accuracy Is Not Transfer: Evaluating Dataset Confounding When Pooling Public EEG Datasets for Anxiety Classification (analysis code)"
+version: 1.0.0
+license: MIT
+authors:
+  - family-names: Javed
+    given-names: Abdullah
+    orcid: "https://orcid.org/0009-0000-6474-5851"
+  - family-names: Guo
+    given-names: Bin
+    orcid: "https://orcid.org/0000-0001-9196-331X"
+  - family-names: Junior
+    given-names: Milembolo Miantezila
+    orcid: "https://orcid.org/0000-0001-7764-3168"
+  - family-names: Ahmed
+    given-names: Muneer
+    orcid: "https://orcid.org/0009-0003-2994-2923"

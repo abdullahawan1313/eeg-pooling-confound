@@ -1,0 +1,25 @@
+device cuda
+  SAM40_arith    windows=2640  task=1320  rest=1320  participants=40
+  SAM40_anytask  windows=5280  task=3960  rest=1320  participants=40
+  MA             windows=2160  task=1080  rest=1080  participants=36
+  within SAM40_arith           cnn_transformer  AUC=0.718  CI[0.680,0.755]   (1 min)
+  within SAM40_arith           bandpower_LR     AUC=0.704  CI[0.671,0.740]   (1 min)
+  within MA                    cnn_transformer  AUC=0.731  CI[0.679,0.783]   (1 min)
+  within MA                    bandpower_LR     AUC=0.681  CI[0.609,0.748]   (1 min)
+    seed 0: AUC=0.620
+    seed 1: AUC=0.619
+    seed 2: AUC=0.616
+  transfer SAM40_arith -> MA   cnn_transformer  AUC=0.629  CI[0.552,0.705]   (2 min)
+  transfer SAM40_arith -> MA   bandpower_LR     AUC=0.477  CI[0.415,0.538]   (2 min)
+    seed 0: AUC=0.509
+    seed 1: AUC=0.484
+    seed 2: AUC=0.564
+  transfer MA -> SAM40_arith   cnn_transformer  AUC=0.525  CI[0.483,0.569]   (2 min)
+  transfer MA -> SAM40_arith   bandpower_LR     AUC=0.456  CI[0.414,0.494]   (2 min)
+    seed 0: AUC=0.632
+    seed 1: AUC=0.614
+    seed 2: AUC=0.640
+  transfer SAM40_anytask -> MA cnn_transformer  AUC=0.639  CI[0.572,0.706]   (3 min)
+  transfer SAM40_anytask -> MA bandpower_LR     AUC=0.521  CI[0.463,0.582]   (3 min)
+
+Reference (anxiety labels, Step 5 LODO): SAM40 0.506, MA 0.555

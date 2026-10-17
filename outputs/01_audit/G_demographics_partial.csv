@@ -1,0 +1,6 @@
+dataset,n,age_mean,age_sd,age_min,age_max,female,male,source
+MentalArithmetic,36.0,18.2,2.2,16.0,26.0,27.0,9.0,subject-info.csv
+BIDS (used subset),30.0,37.4,12.5,19.0,65.0,21.0,9.0,participants.tsv
+DASPS,,,,,,,,not in the dataset files (taken from the dataset publication)
+SAM40,,,,,,,,not in the dataset files (taken from the dataset publication)
+Mendeley,,,,,,,,not in the dataset files (taken from the dataset publication)

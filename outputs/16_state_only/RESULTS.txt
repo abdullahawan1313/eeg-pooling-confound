@@ -1,0 +1,15 @@
+state-only corpus (7380, 10, 512) | device cuda
+  DASPS             seed 0: AUC=0.487   (0 min)
+  DASPS             seed 1: AUC=0.491   (1 min)
+  DASPS             seed 2: AUC=0.496   (1 min)
+  DASPS             seed-avg AUC=0.490 CI[0.410,0.572]  (earlier 1-seed: 0.477)
+  SAM40             seed 0: AUC=0.537   (1 min)
+  SAM40             seed 1: AUC=0.515   (1 min)
+  SAM40             seed 2: AUC=0.548   (2 min)
+  SAM40             seed-avg AUC=0.542 CI[0.503,0.580]  (earlier 1-seed: 0.523)
+  MentalArithmetic  seed 0: AUC=0.557   (2 min)
+  MentalArithmetic  seed 1: AUC=0.570   (2 min)
+  MentalArithmetic  seed 2: AUC=0.502   (2 min)
+  MentalArithmetic  seed-avg AUC=0.562 CI[0.486,0.636]  (earlier 1-seed: 0.538)
+
+  mean of 3 = 0.531

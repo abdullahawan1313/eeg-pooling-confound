@@ -1,0 +1,30 @@
+device cuda | corpus (16371, 10, 512) | SAM40 windows=5280 (%Anxious=75.0; primary was 63.0)
+  [SAM40_taskbased] within SAM40             AUC=0.654
+  [SAM40_taskbased] pooled split 42 AUC=0.732
+  [SAM40_taskbased] pooled split 0  AUC=0.679
+  [SAM40_taskbased] pooled split 1  AUC=0.726
+  [SAM40_taskbased] LODO DASPS             seed 0 AUC=0.495
+  [SAM40_taskbased] LODO DASPS             seed 1 AUC=0.498
+  [SAM40_taskbased] LODO Mendeley          seed 0 AUC=0.481
+  [SAM40_taskbased] LODO Mendeley          seed 1 AUC=0.510
+  [SAM40_taskbased] LODO MentalArithmetic  seed 0 AUC=0.568
+  [SAM40_taskbased] LODO MentalArithmetic  seed 1 AUC=0.570
+  [SAM40_taskbased] LODO SAM40             seed 0 AUC=0.512
+  [SAM40_taskbased] LODO SAM40             seed 1 AUC=0.482
+
+=== SAM40 task-based labels (primary reference: within SAM40 0.659, LODO SAM40 0.506, pooled 0.670) ===
+                               0
+variant          SAM40_taskbased
+within_SAM40               0.654
+within_MA                   None
+within_DASPS                None
+within_Mend                 None
+pooled                     0.713
+pooled_noBIDS              0.648
+pooled_in_SAM40            0.708
+pooled_in_MA               0.716
+lodo_SAM40                 0.497
+lodo_MA                    0.569
+lodo_DASPS                 0.496
+lodo_Mend                  0.495
+lodo_mean                  0.514

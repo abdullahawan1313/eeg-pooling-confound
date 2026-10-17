@@ -1,0 +1,29 @@
+>>> loading SAM40 ...
+    SAM40: recordings=480 windows=5280  (14s)
+>>> loading MentalArithmetic ...
+    MentalArithmetic: recordings=72 windows=2160  (12s)
+>>> loading DASPS ...
+    DASPS: recordings=276 windows=1656  (2s)
+>>> loading Mendeley ...
+    Mendeley: recordings=38 windows=5662  (3s)
+>>> loading BIDS ...
+    BIDS: recordings=30 windows=1613  (67s)
+
+Total windows: 16371  | in_primary: 14655
+
+Per-dataset amplitude (median channel SD in raw uV, before z-score):
+  SAM40             median SD =    13.684   IQR = [10.266, 19.988]
+  MentalArithmetic  median SD =     8.878   IQR = [7.245, 10.961]
+  DASPS             median SD =     5.989   IQR = [4.021, 8.830]
+  Mendeley          median SD =    14.492   IQR = [11.234, 19.919]
+  BIDS              median SD =     6.878   IQR = [5.220, 9.238]
+
+VERIFY: in_primary windows vs earlier corpus.npz
+  [OK  ] SAM40             n= 3564 labels_same=True participants_same=True max|dX|=0.00e+00
+  [OK  ] MentalArithmetic  n= 2160 labels_same=True participants_same=True max|dX|=0.00e+00
+  [OK  ] DASPS             n= 1656 labels_same=True participants_same=True max|dX|=0.00e+00
+  [OK  ] Mendeley          n= 5662 labels_same=True participants_same=True max|dX|=0.00e+00
+  [FAIL] BIDS              n= 1613 labels_same=True participants_same=True max|dX|=2.12e-03
+RESULT: MISMATCH with the earlier corpus.
+
+Saved -> outputs\02_corpus_v2   (175s total)

@@ -1,0 +1,54 @@
+======================================================================
+ STEP 1: AUDIT OF THE EARLIER ANALYSIS
+======================================================================
+corpus windows = 14655
+
+[A] Table 1 re-check + windows per participant
+         dataset  n_participants  windows  pct_anxious  win_per_part_min  win_per_part_median  win_per_part_max  participants_all_anxious  participants_all_normal  participants_mixed
+            BIDS              30     1613          0.0                22                 55.0                55                         0                       30                   0
+           DASPS              23     1656         59.4                72                 72.0                72                         2                        0                  21
+        Mendeley              38     5662         60.5               149                149.0               149                        23                       15                   0
+MentalArithmetic              36     2160         50.0                60                 60.0                60                         0                        0                  36
+           SAM40              40     3564         63.0                33                 88.0               132                         0                        1                  39
+
+[B] Dataset-PRIOR baseline (score = anxious prevalence of the dataset)
+  B1 whole corpus (Table-1 composition): AUC = 0.649  | without BIDS: 0.542
+  B2 actual 80/20 split (seed 42), prevalence from TRAIN participants:
+     prior-only test AUC = 0.676  95% cluster CI [0.571, 0.783]  | without BIDS: 0.521
+     (earlier pooled CNN-Transformer AUC = 0.770 on this same split)
+         dataset  test_participants  test_windows  test_pct_anx  train_prevalence
+            BIDS                  8           438           0.0             0.000
+           DASPS                  4           288          50.0             0.614
+        Mendeley                  7          1043          71.4             0.581
+MentalArithmetic                  8           480          50.0             0.500
+           SAM40                  7           638          63.8             0.628
+
+[C/D/F] LODO_standard  (lodo_preds.npz)
+  BIDS              single-class                   std=0.2636 unique=1608  %predAnx=16
+  DASPS             AUC=0.514 CI[0.456,0.576]      std=0.3582 unique=1647  %predAnx=71
+  Mendeley          AUC=0.507 CI[0.382,0.633]      std=0.2512 unique=5594  %predAnx=16
+  MentalArithmetic  AUC=0.581 CI[0.510,0.653]      std=0.3404 unique=2154  %predAnx=69
+  SAM40             AUC=0.537 CI[0.496,0.580]      std=0.2731 unique=3481  %predAnx=13
+  MEAN(4)           AUC=0.535 CI[0.494,0.575]  P(boot mean >= SESOI 0.6) = 0.001
+
+[C/D/F] LODO_adversarial_lambda1  (lodo_adv_preds.npz)
+  BIDS              single-class                   std=0.0585 unique=1599  %predAnx=96
+  DASPS             AUC=0.507 CI[0.494,0.521]      std=0.0303 unique=41    %predAnx=0
+  Mendeley          AUC=0.500 CI[0.500,0.500]      std=0.0000 unique=1     %predAnx=100  <-- DEGENERATE (almost constant output)
+  MentalArithmetic  AUC=0.496 CI[0.461,0.531]      std=0.0070 unique=2064  %predAnx=0  <-- DEGENERATE (almost constant output)
+  SAM40             AUC=0.423 CI[0.384,0.459]      std=0.0005 unique=1662  %predAnx=100  <-- DEGENERATE (almost constant output)
+  MEAN(4)           AUC=0.481 CI[0.469,0.495]  P(boot mean >= SESOI 0.6) = 0.000
+
+[E] Earlier t-SNE sample: fraction of points from TRAINING participants
+  80.4% of the 3000 t-SNE points came from training participants (only 19.6% held-out).
+  labels in the cache match this reconstruction: True
+
+[G] Demographics (available in the dataset files)
+  BIDS used IDs: sub-001 .. sub-030 (30)
+  DASPS HAM-A (pre): mean=21.5, levels={'severe': 7, 'moderate': 6, 'light': 6, 'normal': 4}
+           dataset    n  age_mean  age_sd  age_min  age_max  female  male                                           source
+  MentalArithmetic 36.0      18.2     2.2     16.0     26.0    27.0   9.0                                 subject-info.csv
+BIDS (used subset) 30.0      37.4    12.5     19.0     65.0    21.0   9.0                                 participants.tsv
+             DASPS  NaN       NaN     NaN      NaN      NaN     NaN   NaN not in the dataset files (taken from the dataset publication)
+             SAM40  NaN       NaN     NaN      NaN      NaN     NaN   NaN not in the dataset files (taken from the dataset publication)
+          Mendeley  NaN       NaN     NaN      NaN      NaN     NaN   NaN not in the dataset files (taken from the dataset publication)

@@ -1,0 +1,30 @@
+corpus (14655, 10, 512) | device cuda
+BIDS              seed 0: specificity=0.780  %predAnx=22  std=0.302   (1 min)
+BIDS              seed 1: specificity=0.553  %predAnx=45  std=0.332   (1 min)
+BIDS              seed 2: specificity=0.941  %predAnx=6  std=0.178   (2 min)
+DASPS             seed 0: AUC=0.514  %predAnx=70  std=0.378   (3 min)
+DASPS             seed 1: AUC=0.508  %predAnx=69  std=0.378   (3 min)
+DASPS             seed 2: AUC=0.513  %predAnx=58  std=0.403   (4 min)
+Mendeley          seed 0: AUC=0.534  %predAnx=18  std=0.264   (4 min)
+Mendeley          seed 1: AUC=0.575  %predAnx=34  std=0.330   (5 min)
+Mendeley          seed 2: AUC=0.549  %predAnx=11  std=0.222   (5 min)
+MentalArithmetic  seed 0: AUC=0.578  %predAnx=46  std=0.389   (6 min)
+MentalArithmetic  seed 1: AUC=0.555  %predAnx=51  std=0.382   (6 min)
+MentalArithmetic  seed 2: AUC=0.534  %predAnx=58  std=0.312   (7 min)
+SAM40             seed 0: AUC=0.511  %predAnx=15  std=0.240   (8 min)
+SAM40             seed 1: AUC=0.486  %predAnx=35  std=0.365   (8 min)
+SAM40             seed 2: AUC=0.532  %predAnx=38  std=0.332   (9 min)
+
+=== LODO, seed-averaged predictions, participant-cluster 95% CI ===
+  DASPS             AUC=0.515  CI[0.442,0.587]  seed-SD=0.003
+  Mendeley          AUC=0.569  CI[0.451,0.687]  seed-SD=0.021
+  MentalArithmetic  AUC=0.555  CI[0.488,0.622]  seed-SD=0.022
+  SAM40             AUC=0.506  CI[0.461,0.551]  seed-SD=0.023
+  MEAN of 4         AUC=0.536  CI[0.496,0.577]   P(mean >= 0.6) = 0.0015
+
+=== Within-dataset (Step 3) vs LODO (CNN-Transformer) ===
+         dataset  within  lodo    gap
+           DASPS   0.483 0.515 -0.032
+        Mendeley   0.573 0.569  0.005
+MentalArithmetic   0.726 0.555  0.171
+           SAM40   0.659 0.506  0.153

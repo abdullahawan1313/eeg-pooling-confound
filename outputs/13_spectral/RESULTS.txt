@@ -1,0 +1,36 @@
+raw corpus (14655, 10, 512)
+saved fig_spectra.png
+
+=== FOOOF per dataset (participant level, mean +/- sd) ===
+                 offset       exponent       alpha_cf       alpha_pw       rel_alpha       low_ratio        hf_ratio          r2      
+                   mean   std     mean   std     mean   std     mean   std      mean   std      mean    std     mean   std  mean   std
+dataset                                                                                                                               
+BIDS               1.22  0.41     1.44  0.30     9.87  0.90     1.13  0.40      0.46  0.17      4.39   4.49     0.04  0.05  0.99  0.01
+DASPS              1.35  0.62     1.09  0.46    10.29  0.87     0.73  0.34      0.37  0.15      0.01   0.02     0.22  0.27  0.96  0.07
+Mendeley           2.23  0.77     1.51  0.52    10.65  0.89     0.76  0.36      0.16  0.13     20.92  14.21     0.12  0.17  0.98  0.05
+MentalArithmetic   1.89  0.30     1.87  0.27    10.73  0.80     0.95  0.31      0.32  0.12      5.05   1.82     0.03  0.02  0.99  0.01
+SAM40              1.58  0.44     1.09  0.41    10.47  1.35     0.21  0.13      0.06  0.02     12.72   5.61     0.46  0.24  0.92  0.09
+
+=== Dataset identity from participant-level features (5-fold LR) ===
+  aperiodic (offset, exponent)   acc=0.629  (majority 0.240)
+  alpha (cf, pw, rel)            acc=0.629  (majority 0.240)
+  filter/noise (1-3 Hz & 30-40 Hz ratios) acc=0.707  (majority 0.240)
+  all                            acc=0.875  (majority 0.240)
+
+=== Frontal alpha asymmetry vs label, WITHIN each dataset (no training) ===
+  hypothesis: anxious -> lower FAA (relatively more right-frontal activity). AUC uses -FAA.
+  F4-F3  DASPS             AUC=0.400  CI[0.305,0.509]
+  F4-F3  Mendeley          AUC=0.614  CI[0.478,0.740]
+  F4-F3  MentalArithmetic  AUC=0.483  CI[0.422,0.548]
+  F4-F3  SAM40             AUC=0.490  CI[0.455,0.529]
+  F8-F7  DASPS             AUC=0.529  CI[0.443,0.609]
+  F8-F7  Mendeley          AUC=0.532  CI[0.422,0.641]
+  F8-F7  MentalArithmetic  AUC=0.514  CI[0.460,0.570]
+  F8-F7  SAM40             AUC=0.473  CI[0.436,0.511]
+
+=== Age vs alpha peak frequency (MA + BIDS) ===
+  n=66  Spearman rho(age, alpha CF)=-0.36  p=0.00295
+                    age  alpha_cf  exponent
+dataset                                    
+BIDS              37.43      9.87      1.44
+MentalArithmetic  18.25     10.73      1.87

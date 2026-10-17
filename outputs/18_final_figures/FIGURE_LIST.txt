@@ -1,0 +1,13 @@
+Final figures (main text)
+Fig 1  Label balance per dataset
+Fig 2  (a) dataset identity (b) per-dataset recall (c) spectra
+Fig 3  (a) pooled vs prior vs LODO (b) pooled decomposition
+Fig 4  Within-dataset vs LODO, 95% CI
+Fig 5  LODO confusion matrices, 3-seed average
+Fig 6  Positive control: arithmetic vs rest
+Fig 7  Dataset-adversarial training, lambda sweep
+Fig 8  State-only LODO, 3 seeds
+Fig 9  Robustness: LODO across 12 variants
+Supplementary (Online Resource 1)
+Fig S1 Architectures, within vs LODO (step 06 runs; within values differ slightly from Fig 4, which uses step 03)
+Fig S2 t-SNE, held-out participants only (descriptive)

@@ -1,0 +1,48 @@
+device cuda | raw corpus (14655, 10, 512)
+  [window_global] within DASPS             AUC=0.570
+  [window_global] within Mendeley          AUC=0.631
+  [window_global] within MentalArithmetic  AUC=0.732
+  [window_global] within SAM40             AUC=0.693
+  [window_global] pooled split 42 AUC=0.776
+  [window_global] pooled split 0  AUC=0.592
+  [window_global] pooled split 1  AUC=0.619
+  [window_global] LODO DASPS             seed 0 AUC=0.516
+  [window_global] LODO DASPS             seed 1 AUC=0.463
+  [window_global] LODO Mendeley          seed 0 AUC=0.526
+  [window_global] LODO Mendeley          seed 1 AUC=0.610
+  [window_global] LODO MentalArithmetic  seed 0 AUC=0.560
+  [window_global] LODO MentalArithmetic  seed 1 AUC=0.603
+  [window_global] LODO SAM40             seed 0 AUC=0.497
+  [window_global] LODO SAM40             seed 1 AUC=0.447
+  [fixed_scale] within DASPS             AUC=0.556
+  [fixed_scale] within Mendeley          AUC=0.648
+  [fixed_scale] within MentalArithmetic  AUC=0.735
+  [fixed_scale] within SAM40             AUC=0.698
+  [fixed_scale] pooled split 42 AUC=0.760
+  [fixed_scale] pooled split 0  AUC=0.615
+  [fixed_scale] pooled split 1  AUC=0.599
+  [fixed_scale] LODO DASPS             seed 0 AUC=0.555
+  [fixed_scale] LODO DASPS             seed 1 AUC=0.520
+  [fixed_scale] LODO Mendeley          seed 0 AUC=0.582
+  [fixed_scale] LODO Mendeley          seed 1 AUC=0.576
+  [fixed_scale] LODO MentalArithmetic  seed 0 AUC=0.527
+  [fixed_scale] LODO MentalArithmetic  seed 1 AUC=0.582
+  [fixed_scale] LODO SAM40             seed 0 AUC=0.463
+  [fixed_scale] LODO SAM40             seed 1 AUC=0.459
+
+=== Normalisation sensitivity (reference main pipeline: pooled 0.670, LODO mean 0.536) ===
+                             0            1
+variant          window_global  fixed_scale
+within_SAM40             0.693        0.698
+within_MA                0.732        0.735
+within_DASPS              0.57        0.556
+within_Mend              0.631        0.648
+pooled                   0.663        0.658
+pooled_noBIDS            0.589        0.579
+pooled_in_SAM40          0.676        0.676
+pooled_in_MA             0.668        0.719
+lodo_SAM40               0.472        0.461
+lodo_MA                  0.582        0.554
+lodo_DASPS               0.489        0.537
+lodo_Mend                0.568        0.579
+lodo_mean                0.528        0.533

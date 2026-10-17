@@ -1,0 +1,34 @@
+device cuda | raw corpus (14655, 10, 512)
+identity probe (band-power LR, participant-wise): baseline z-score=0.888  EA=0.892  majority=0.386
+  [EA] within DASPS             AUC=0.500
+  [EA] within Mendeley          AUC=0.639
+  [EA] within MentalArithmetic  AUC=0.749
+  [EA] within SAM40             AUC=0.641
+  [EA] pooled split 42 AUC=0.700
+  [EA] pooled split 0  AUC=0.608
+  [EA] pooled split 1  AUC=0.524
+  [EA] LODO DASPS             seed 0 AUC=0.509
+  [EA] LODO DASPS             seed 1 AUC=0.517
+  [EA] LODO Mendeley          seed 0 AUC=0.483
+  [EA] LODO Mendeley          seed 1 AUC=0.487
+  [EA] LODO MentalArithmetic  seed 0 AUC=0.573
+  [EA] LODO MentalArithmetic  seed 1 AUC=0.558
+  [EA] LODO SAM40             seed 0 AUC=0.512
+  [EA] LODO SAM40             seed 1 AUC=0.507
+
+=== EA summary (compare with Step 5/6 cnn_transformer: LODO mean 0.536) ===
+                     0
+variant             EA
+within_SAM40     0.641
+within_MA        0.749
+within_DASPS       0.5
+within_Mend      0.639
+pooled           0.611
+pooled_noBIDS    0.537
+pooled_in_SAM40  0.617
+pooled_in_MA     0.652
+lodo_SAM40       0.509
+lodo_MA          0.565
+lodo_DASPS       0.513
+lodo_Mend        0.485
+lodo_mean        0.518
