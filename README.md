@@ -1,10 +1,10 @@
-# Pooled accuracy is not transfer: dataset confounding across public EEG datasets
+# Dataset leakage in pooled EEG anxiety classification: a multi-level evaluation across five public datasets
 
 [![DOI](https://zenodo.org/badge/1422872685.svg)](https://doi.org/10.5281/zenodo.23429384)
 
 Analysis code for the article
 
-> Javed A, Guo B, Junior MM, Ahmad M. *Pooled Accuracy Is Not Transfer: Evaluating Dataset Confounding When Pooling Public EEG Datasets for Anxiety Classification.* Submitted to *Neuroinformatics*.
+> Javed A, Guo B, Junior MM, Ahmad M. *Dataset leakage in pooled EEG anxiety classification: a multi-level evaluation across five public datasets.* Submitted for publication.
 
 The scripts pool five public EEG datasets, harmonise them to ten common channels, and test how much of a pooled participant-wise estimate reflects within-dataset discrimination, differences between datasets, and transfer to an unseen dataset (leave-one-dataset-out, LODO). Every table and figure in the article is produced by the scripts below.
 
